@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>To-Do List App</title>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <h1>TODO</h1>
+        <img
+          id="mode-icon"
+          src="images/icon-sun.svg"
+          alt="sun-icon"
+          class="mode-icon dark"
+        />
+      </div>
+    </header>
+    <main>
+      <form id="task-form">
+        <div class="checkbox-container">
+          <input type="checkbox" id="new-task" />
+          <label for="new-task" class="round-checkbox"></label>
+        </div>
+        <input
+          type="text"
+          id="task-input"
+          name="task-input"
+          placeholder="Create a new todo..."
+        />
+      </form>
+      <ul id="task-list">
+        <!-- Tasks will be added on the backend -->
+      </ul>
+      <div class="btn-container taskcount-container">
+        <p id="taskcount">0 items left</p>
+        <div class="btn-container btn-container-large">
+          <button id="all-btn" class="current">All</button>
+          <button id="active-btn">Active</button>
+          <button id="completed-btn">Completed</button>
+        </div>
+        <button id="clear-btn">Clear Completed</button>
+      </div>
+      <div class="btn-container btn-container-small">
+        <button id="all-btn" class="current">All</button>
+        <button id="active-btn">Active</button>
+        <button id="completed-btn">Completed</button>
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
