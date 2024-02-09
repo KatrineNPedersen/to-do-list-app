@@ -144,6 +144,17 @@ document.getElementById("completed-btn").addEventListener("click", function () {
   document.getElementById("all-btn").classList.remove("current");
 });
 
+// Fetch completed tasks when completed button is pressed
+document
+  .getElementById("completed-btn-small")
+  .addEventListener("click", function () {
+    fetchAndDisplayTasks("/api/tasks/completed");
+
+    document.getElementById("completed-btn-small").classList.add("current");
+    document.getElementById("active-btn-small").classList.remove("current");
+    document.getElementById("all-btn-small").classList.remove("current");
+  });
+
 // Fetch and display active tasks when active button is pressed
 document.getElementById("active-btn").addEventListener("click", function () {
   fetchAndDisplayTasks("/api/tasks/active");
@@ -153,6 +164,17 @@ document.getElementById("active-btn").addEventListener("click", function () {
   document.getElementById("all-btn").classList.remove("current");
 });
 
+// Fetch and display active tasks when active button is pressed
+document
+  .getElementById("active-btn-small")
+  .addEventListener("click", function () {
+    fetchAndDisplayTasks("/api/tasks/active");
+
+    document.getElementById("completed-btn-small").classList.remove("current");
+    document.getElementById("active-btn-small").classList.add("current");
+    document.getElementById("all-btn-small").classList.remove("current");
+  });
+
 // Fetch and display all tasks when all button is pressed
 document.getElementById("all-btn").addEventListener("click", function () {
   fetchAndDisplayTasks("/api/tasks");
@@ -160,6 +182,15 @@ document.getElementById("all-btn").addEventListener("click", function () {
   document.getElementById("completed-btn").classList.remove("current");
   document.getElementById("active-btn").classList.remove("current");
   document.getElementById("all-btn").classList.add("current");
+});
+
+// Fetch and display all tasks when all button is pressed
+document.getElementById("all-btn-small").addEventListener("click", function () {
+  fetchAndDisplayTasks("/api/tasks");
+
+  document.getElementById("completed-btn-small").classList.remove("current");
+  document.getElementById("active-btn-small").classList.remove("current");
+  document.getElementById("all-btn-small").classList.add("current");
 });
 
 // Fetch and display tasks when the page loads
